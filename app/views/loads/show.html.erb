@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @load %>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @load.customer %>
+</p>
+
+
+<div>
+  <%= link_to "Edit this load", edit_load_path(@load) %> |
+  <%= link_to "Back to loads", loads_path %>
+
+  <%= button_to "Destroy this load", @load, method: :delete %>
+</div>

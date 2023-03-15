@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <p class="alert alert-success"><%= notice %></p>
+
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title">Customer Details</h5>
+    </div>
+    <div class="card-body">
+      <%= render @customer %>
+    </div>
+    <div class="card-footer">
+      <%= link_to "Edit", edit_customer_path(@customer), class: "btn btn-primary col-2", style: "" %>
+      <%= button_to "Delete", @customer, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger auto col-2", style: "" %>
+      <%= link_to "Back to Customers", customers_path, class: "btn btn-secondary col-2", style: "" %>
+    </div>
+  </div>
+</div>
+</body>
+</html>

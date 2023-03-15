@@ -1,0 +1,21 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-center" >Customers</h1>
+
+<div class="container" id="customers">
+  <% @customers.each do |customer| %>
+    <%= render customer %>
+    <p>
+      <%= link_to "Show this customer", customer, class: "btn btn-primary col-2", style: "" %>
+    </p>
+  <% end %>
+</div>
+
+<div class="card-footer text-center">
+  <%= link_to "New customer", new_customer_path, class: "btn btn-primary col-2", style: "" %>
+  <%= link_to "All loads", loads_path, class: "btn btn-danger col-2", style: "" %>
+  <%= link_to 'Homepage', root_path, class: "btn btn-secondary col-2", style: "" %>
+</div>
+
